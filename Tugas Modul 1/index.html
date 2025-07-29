@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f0f8ff;
+    }
+    fieldset {
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #ffffff;
+    }
+    label {
+      margin-top: 10px;
+      display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .submit-button {
+      background-color: #007bff; 
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      margin-top: 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+    img {
+      max-width: 200px;
+      display: block;
+      margin-bottom: 20px;
+    }
+    .footer-link {
+      margin-top: 30px;
+    }
+    .radio-group label {
+      display: inline-block;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gambar Logo Kampus -->
+  <img src="stitek.jpg" alt="Logo Kampus">
+
+  <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+
+  <form action="#" method="post">
+    <!-- Data Pribadi -->
+    <fieldset>
+      <legend>Data Pribadi</legend>
+      
+      <label for="nama">Nama Lengkap:</label>
+      <input type="text" id="nama" name="nama" placeholder="Contoh: Andi Pratama" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="contoh@email.com" required>
+
+      <label>Jenis Kelamin:</label>
+      <div class="radio-group">
+        <label><input type="radio" name="gender" value="Pria" required> Pria</label>
+        <label><input type="radio" name="gender" value="Wanita"> Wanita</label>
+      </div>
+    </fieldset>
+
+    <!-- Hobi -->
+    <fieldset>
+      <legend>Hobi</legend>
+      <label><input type="checkbox" name="hobi[]" value="Membaca" checked> Membaca</label>
+      <label><input type="checkbox" name="hobi[]" value="Olahraga" checked> Olahraga</label>
+      <label><input type="checkbox" name="hobi[]" value="Musik"> Musik</label>
+      <label><input type="checkbox" name="hobi[]" value="Traveling"> Traveling</label>
+    </fieldset>
+
+    <!-- Jurusan -->
+    <fieldset>
+      <legend>Pilihan Jurusan</legend>
+      <label for="jurusan">Pilih Jurusan:</label>
+      <select id="jurusan" name="jurusan" required>
+        <option value="">-- Pilih Jurusan --</option>
+        <option value="TI">Teknik Informatika</option>
+        <option value="Manajemen">Manajemen</option>
+        <option value="Akuntansi">Akuntansi</option>
+      </select>
+    </fieldset>
+
+    <!-- Alamat -->
+    <fieldset>
+      <legend>Alamat Lengkap</legend>
+      <label for="alamat">Alamat:</label>
+      <textarea id="alamat" name="alamat" rows="4" placeholder="Tulis alamat lengkap di sini..."></textarea>
+    </fieldset>
+
+    <!-- Tombol Submit -->
+    <input type="submit" value="Kirim Formulir" class="submit-button">
+  </form>
+
+  <!-- Link Informasi Tambahan -->
+  <div class="footer-link">
+    <p>Untuk informasi lebih lanjut, kunjungi <a href="https://www.stitek.ac.id" target="_blank">halaman resmi kampus</a>.</p>
+  </div>
+
+  <!-- Komentar HTML -->
+  <!-- Form ini dibuat untuk memenuhi tugas praktikum pembuatan form HTML5 pendaftaran mahasiswa baru -->
+
+</body>
+</html>
